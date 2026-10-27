@@ -1,0 +1,15 @@
+sev_et_fi class: character 
+sev_et_fi unique values:
+[1] "--/--"         "0.0[%]/0.0[%]"
+
+co2_et_fi class: character 
+co2_et_fi unique values:
+ [1] "--/--"            "0[mmHg]/0[mmHg]"  "1[mmHg]/0[mmHg]"  "30[mmHg]/1[mmHg]"
+ [5] "29[mmHg]/1[mmHg]" "28[mmHg]/1[mmHg]" "27[mmHg]/1[mmHg]" "26[mmHg]/1[mmHg]"
+ [9] "25[mmHg]/1[mmHg]" "24[mmHg]/1[mmHg]" "31[mmHg]/1[mmHg]" "32[mmHg]/1[mmHg]"
+[13] "33[mmHg]/1[mmHg]" "34[mmHg]/1[mmHg]" "35[mmHg]/1[mmHg]" "36[mmHg]/1[mmHg]"
+[17] "38[mmHg]/1[mmHg]" "40[mmHg]/1[mmHg]" "39[mmHg]/1[mmHg]" "37[mmHg]/1[mmHg]"
+[21] "26[mmHg]/0[mmHg]" "27[mmHg]/0[mmHg]" "28[mmHg]/0[mmHg]" "29[mmHg]/0[mmHg]"
+[25] "41[mmHg]/1[mmHg]" "48[mmHg]/1[mmHg]" "42[mmHg]/1[mmHg]" "32[mmHg]/0[mmHg]"
+[29] "31[mmHg]/0[mmHg]" "30[mmHg]/0[mmHg]" "25[mmHg]/0[mmHg]" "34[mmHg]/0[mmHg]"
+[33] "35[mmHg]/0[mmHg]"

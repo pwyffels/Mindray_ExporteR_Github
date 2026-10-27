@@ -1,0 +1,25 @@
++Ppeak col (ppeak) class: character 
+Sample ppeak values (raw):
+ [1] NA NA NA NA NA NA NA NA NA NA
+
+sev_et_fi sample:
+[1] "--/--" "--/--" "--/--" "--/--" "--/--"
+
+After separate, et_sevo sample:
+[1] "--" "--" "--" "--" "--"
+
+NIBP long rows: 111 
+Duplicate times in NIBP?
+Duplicate rows: 0 
+
+NIBP pivot_wider test:
+nibp_wide rows: 37 
+# A tibble: 6 × 4
+  time                nibp_s_mm_hg nibp_d_mm_hg nibp_m_mm_hg
+  <dttm>                     <dbl>        <dbl>        <dbl>
+1 2026-09-19 13:40:00           89           50           64
+2 2026-09-19 13:43:00           77           51           57
+3 2026-09-19 13:46:00           61           37           45
+4 2026-09-19 13:49:00           69           36           46
+5 2026-09-19 13:52:00           68           36           43
+6 2026-09-19 13:55:00           75           41           52

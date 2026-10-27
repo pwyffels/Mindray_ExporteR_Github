@@ -1,0 +1,506 @@
+
+Attaching package: ‘janitor’
+
+The following objects are masked from ‘package:stats’:
+
+    chisq.test, fisher.test
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: ggplot2
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+Running wrangle_raw...
+New names:
+• `DumpID` -> `DumpID...65`
+• `DrugName` -> `DrugName...66`
+• `DrugConcentratrion` -> `DrugConcentratrion...67`
+• `InfusionStatus` -> `InfusionStatus...68`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...69`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...70`
+• `InfVol(ml)` -> `InfVol(ml)...71`
+• `RemainTime(s)` -> `RemainTime(s)...72`
+• `DumpID` -> `DumpID...73`
+• `DrugName` -> `DrugName...74`
+• `DrugConcentratrion` -> `DrugConcentratrion...75`
+• `InfusionStatus` -> `InfusionStatus...76`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...77`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...78`
+• `InfVol(ml)` -> `InfVol(ml)...79`
+• `RemainTime(s)` -> `RemainTime(s)...80`
+• `DumpID` -> `DumpID...81`
+• `DrugName` -> `DrugName...82`
+• `DrugConcentratrion` -> `DrugConcentratrion...83`
+• `InfusionStatus` -> `InfusionStatus...84`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...85`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...86`
+• `InfVol(ml)` -> `InfVol(ml)...87`
+• `RemainTime(s)` -> `RemainTime(s)...88`
+• `DumpID` -> `DumpID...89`
+• `DrugName` -> `DrugName...90`
+• `DrugConcentratrion` -> `DrugConcentratrion...91`
+• `InfusionStatus` -> `InfusionStatus...92`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...93`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...94`
+• `InfVol(ml)` -> `InfVol(ml)...95`
+• `RemainTime(s)` -> `RemainTime(s)...96`
+• `DumpID` -> `DumpID...97`
+• `DrugName` -> `DrugName...98`
+• `DrugConcentratrion` -> `DrugConcentratrion...99`
+• `InfusionStatus` -> `InfusionStatus...100`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...101`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...102`
+• `InfVol(ml)` -> `InfVol(ml)...103`
+• `RemainTime(s)` -> `RemainTime(s)...104`
+• `DumpID` -> `DumpID...105`
+• `DrugName` -> `DrugName...106`
+• `DrugConcentratrion` -> `DrugConcentratrion...107`
+• `InfusionStatus` -> `InfusionStatus...108`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...109`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...110`
+• `InfVol(ml)` -> `InfVol(ml)...111`
+• `RemainTime(s)` -> `RemainTime(s)...112`
+• `DumpID` -> `DumpID...113`
+• `DrugName` -> `DrugName...114`
+• `DrugConcentratrion` -> `DrugConcentratrion...115`
+• `InfusionStatus` -> `InfusionStatus...116`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...117`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...118`
+• `InfVol(ml)` -> `InfVol(ml)...119`
+• `RemainTime(s)` -> `RemainTime(s)...120`
+• `DumpID` -> `DumpID...121`
+• `DrugName` -> `DrugName...122`
+• `DrugConcentratrion` -> `DrugConcentratrion...123`
+• `InfusionStatus` -> `InfusionStatus...124`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...125`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...126`
+• `InfVol(ml)` -> `InfVol(ml)...127`
+• `RemainTime(s)` -> `RemainTime(s)...128`
+• `DumpID` -> `DumpID...129`
+• `DrugName` -> `DrugName...130`
+• `DrugConcentratrion` -> `DrugConcentratrion...131`
+• `InfusionStatus` -> `InfusionStatus...132`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...133`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...134`
+• `InfVol(ml)` -> `InfVol(ml)...135`
+• `RemainTime(s)` -> `RemainTime(s)...136`
+• `DumpID` -> `DumpID...137`
+• `DrugName` -> `DrugName...138`
+• `DrugConcentratrion` -> `DrugConcentratrion...139`
+• `InfusionStatus` -> `InfusionStatus...140`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...141`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...142`
+• `InfVol(ml)` -> `InfVol(ml)...143`
+• `RemainTime(s)` -> `RemainTime(s)...144`
+• `DumpID` -> `DumpID...145`
+• `DrugName` -> `DrugName...146`
+• `DrugConcentratrion` -> `DrugConcentratrion...147`
+• `InfusionStatus` -> `InfusionStatus...148`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...149`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...150`
+• `InfVol(ml)` -> `InfVol(ml)...151`
+• `RemainTime(s)` -> `RemainTime(s)...152`
+• `DumpID` -> `DumpID...153`
+• `DrugName` -> `DrugName...154`
+• `DrugConcentratrion` -> `DrugConcentratrion...155`
+• `InfusionStatus` -> `InfusionStatus...156`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...157`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...158`
+• `InfVol(ml)` -> `InfVol(ml)...159`
+• `RemainTime(s)` -> `RemainTime(s)...160`
+• `DumpID` -> `DumpID...161`
+• `DrugName` -> `DrugName...162`
+• `DrugConcentratrion` -> `DrugConcentratrion...163`
+• `InfusionStatus` -> `InfusionStatus...164`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...165`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...166`
+• `InfVol(ml)` -> `InfVol(ml)...167`
+• `RemainTime(s)` -> `RemainTime(s)...168`
+• `DumpID` -> `DumpID...169`
+• `DrugName` -> `DrugName...170`
+• `DrugConcentratrion` -> `DrugConcentratrion...171`
+• `InfusionStatus` -> `InfusionStatus...172`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...173`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...174`
+• `InfVol(ml)` -> `InfVol(ml)...175`
+• `RemainTime(s)` -> `RemainTime(s)...176`
+• `DumpID` -> `DumpID...177`
+• `DrugName` -> `DrugName...178`
+• `DrugConcentratrion` -> `DrugConcentratrion...179`
+• `InfusionStatus` -> `InfusionStatus...180`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...181`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...182`
+• `InfVol(ml)` -> `InfVol(ml)...183`
+• `RemainTime(s)` -> `RemainTime(s)...184`
+• `DumpID` -> `DumpID...185`
+• `DrugName` -> `DrugName...186`
+• `DrugConcentratrion` -> `DrugConcentratrion...187`
+• `InfusionStatus` -> `InfusionStatus...188`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...189`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...190`
+• `InfVol(ml)` -> `InfVol(ml)...191`
+• `RemainTime(s)` -> `RemainTime(s)...192`
+• `DumpID` -> `DumpID...193`
+• `DrugName` -> `DrugName...194`
+• `DrugConcentratrion` -> `DrugConcentratrion...195`
+• `InfusionStatus` -> `InfusionStatus...196`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...197`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...198`
+• `InfVol(ml)` -> `InfVol(ml)...199`
+• `RemainTime(s)` -> `RemainTime(s)...200`
+• `DumpID` -> `DumpID...201`
+• `DrugName` -> `DrugName...202`
+• `DrugConcentratrion` -> `DrugConcentratrion...203`
+• `InfusionStatus` -> `InfusionStatus...204`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...205`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...206`
+• `InfVol(ml)` -> `InfVol(ml)...207`
+• `RemainTime(s)` -> `RemainTime(s)...208`
+• `DumpID` -> `DumpID...209`
+• `DrugName` -> `DrugName...210`
+• `DrugConcentratrion` -> `DrugConcentratrion...211`
+• `InfusionStatus` -> `InfusionStatus...212`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...213`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...214`
+• `InfVol(ml)` -> `InfVol(ml)...215`
+• `RemainTime(s)` -> `RemainTime(s)...216`
+• `DumpID` -> `DumpID...217`
+• `DrugName` -> `DrugName...218`
+• `DrugConcentratrion` -> `DrugConcentratrion...219`
+• `InfusionStatus` -> `InfusionStatus...220`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...221`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...222`
+• `InfVol(ml)` -> `InfVol(ml)...223`
+• `RemainTime(s)` -> `RemainTime(s)...224`
+• `DumpID` -> `DumpID...225`
+• `DrugName` -> `DrugName...226`
+• `DrugConcentratrion` -> `DrugConcentratrion...227`
+• `InfusionStatus` -> `InfusionStatus...228`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...229`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...230`
+• `InfVol(ml)` -> `InfVol(ml)...231`
+• `RemainTime(s)` -> `RemainTime(s)...232`
+• `DumpID` -> `DumpID...233`
+• `DrugName` -> `DrugName...234`
+• `DrugConcentratrion` -> `DrugConcentratrion...235`
+• `InfusionStatus` -> `InfusionStatus...236`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...237`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...238`
+• `InfVol(ml)` -> `InfVol(ml)...239`
+• `RemainTime(s)` -> `RemainTime(s)...240`
+• `DumpID` -> `DumpID...241`
+• `DrugName` -> `DrugName...242`
+• `DrugConcentratrion` -> `DrugConcentratrion...243`
+• `InfusionStatus` -> `InfusionStatus...244`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...245`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...246`
+• `InfVol(ml)` -> `InfVol(ml)...247`
+• `RemainTime(s)` -> `RemainTime(s)...248`
+• `DumpID` -> `DumpID...249`
+• `DrugName` -> `DrugName...250`
+• `DrugConcentratrion` -> `DrugConcentratrion...251`
+• `InfusionStatus` -> `InfusionStatus...252`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...253`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...254`
+• `InfVol(ml)` -> `InfVol(ml)...255`
+• `RemainTime(s)` -> `RemainTime(s)...256`
+Rows: 932 Columns: 256
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr   (34): T2(°C), +O2%, +Ppeak, +Pmean, +TVe, +TVi, +MVspn, +MVe, +MVi, +f...
+dbl   (87): HR(bpm), SpO2(%), PI(%), NIBP-S(mmHg), NIBP-D(mmHg), NIBP-M(mmHg...
+lgl  (134): DrugConcentratrion...91, DrugName...106, DrugConcentratrion...10...
+dttm   (1): Time
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Warning message:
+There were 4 warnings in `mutate()`.
+The first warning was:
+ℹ In argument: `across(-time, ~as.numeric(str_trim(str_remove_all(.x,
+  "\\[.*?\\]"))))`.
+Caused by warning:
+! NAs introduced by coercion
+ℹ Run `dplyr::last_dplyr_warnings()` to see the 3 remaining warnings. 
+wrangle_raw succeeded. Columns:
+ [1] "time"             "hr_bpm"           "sp_o2_percent"    "nibp_s_mm_hg"    
+ [5] "nibp_d_mm_hg"     "nibp_m_mm_hg"     "art_s_mm_hg"      "art_d_mm_hg"     
+ [9] "art_m_mm_hg"      "cvp_mm_hg"        "ppv_percent"      "et_o2_percent"   
+[13] "fi_o2_percent"    "rr_rpm"           "ppeak"            "pmean"           
+[17] "t_vi"             "m_vspn"           "ftotal"           "pv_cs_min"       
+[21] "pauses_min"       "vp_bs_min"        "couplets_min"     "missed_beats_min"
+[25] "r_on_ts_min"      "qt_ms"            "q_tc_ms"          "et_sevo"         
+[29] "fi_sevo"          "et_co2"           "fi_co2"          
+
+Sample sev_et_fi raw (before wrangle):
+New names:
+• `DumpID` -> `DumpID...65`
+• `DrugName` -> `DrugName...66`
+• `DrugConcentratrion` -> `DrugConcentratrion...67`
+• `InfusionStatus` -> `InfusionStatus...68`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...69`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...70`
+• `InfVol(ml)` -> `InfVol(ml)...71`
+• `RemainTime(s)` -> `RemainTime(s)...72`
+• `DumpID` -> `DumpID...73`
+• `DrugName` -> `DrugName...74`
+• `DrugConcentratrion` -> `DrugConcentratrion...75`
+• `InfusionStatus` -> `InfusionStatus...76`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...77`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...78`
+• `InfVol(ml)` -> `InfVol(ml)...79`
+• `RemainTime(s)` -> `RemainTime(s)...80`
+• `DumpID` -> `DumpID...81`
+• `DrugName` -> `DrugName...82`
+• `DrugConcentratrion` -> `DrugConcentratrion...83`
+• `InfusionStatus` -> `InfusionStatus...84`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...85`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...86`
+• `InfVol(ml)` -> `InfVol(ml)...87`
+• `RemainTime(s)` -> `RemainTime(s)...88`
+• `DumpID` -> `DumpID...89`
+• `DrugName` -> `DrugName...90`
+• `DrugConcentratrion` -> `DrugConcentratrion...91`
+• `InfusionStatus` -> `InfusionStatus...92`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...93`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...94`
+• `InfVol(ml)` -> `InfVol(ml)...95`
+• `RemainTime(s)` -> `RemainTime(s)...96`
+• `DumpID` -> `DumpID...97`
+• `DrugName` -> `DrugName...98`
+• `DrugConcentratrion` -> `DrugConcentratrion...99`
+• `InfusionStatus` -> `InfusionStatus...100`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...101`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...102`
+• `InfVol(ml)` -> `InfVol(ml)...103`
+• `RemainTime(s)` -> `RemainTime(s)...104`
+• `DumpID` -> `DumpID...105`
+• `DrugName` -> `DrugName...106`
+• `DrugConcentratrion` -> `DrugConcentratrion...107`
+• `InfusionStatus` -> `InfusionStatus...108`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...109`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...110`
+• `InfVol(ml)` -> `InfVol(ml)...111`
+• `RemainTime(s)` -> `RemainTime(s)...112`
+• `DumpID` -> `DumpID...113`
+• `DrugName` -> `DrugName...114`
+• `DrugConcentratrion` -> `DrugConcentratrion...115`
+• `InfusionStatus` -> `InfusionStatus...116`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...117`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...118`
+• `InfVol(ml)` -> `InfVol(ml)...119`
+• `RemainTime(s)` -> `RemainTime(s)...120`
+• `DumpID` -> `DumpID...121`
+• `DrugName` -> `DrugName...122`
+• `DrugConcentratrion` -> `DrugConcentratrion...123`
+• `InfusionStatus` -> `InfusionStatus...124`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...125`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...126`
+• `InfVol(ml)` -> `InfVol(ml)...127`
+• `RemainTime(s)` -> `RemainTime(s)...128`
+• `DumpID` -> `DumpID...129`
+• `DrugName` -> `DrugName...130`
+• `DrugConcentratrion` -> `DrugConcentratrion...131`
+• `InfusionStatus` -> `InfusionStatus...132`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...133`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...134`
+• `InfVol(ml)` -> `InfVol(ml)...135`
+• `RemainTime(s)` -> `RemainTime(s)...136`
+• `DumpID` -> `DumpID...137`
+• `DrugName` -> `DrugName...138`
+• `DrugConcentratrion` -> `DrugConcentratrion...139`
+• `InfusionStatus` -> `InfusionStatus...140`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...141`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...142`
+• `InfVol(ml)` -> `InfVol(ml)...143`
+• `RemainTime(s)` -> `RemainTime(s)...144`
+• `DumpID` -> `DumpID...145`
+• `DrugName` -> `DrugName...146`
+• `DrugConcentratrion` -> `DrugConcentratrion...147`
+• `InfusionStatus` -> `InfusionStatus...148`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...149`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...150`
+• `InfVol(ml)` -> `InfVol(ml)...151`
+• `RemainTime(s)` -> `RemainTime(s)...152`
+• `DumpID` -> `DumpID...153`
+• `DrugName` -> `DrugName...154`
+• `DrugConcentratrion` -> `DrugConcentratrion...155`
+• `InfusionStatus` -> `InfusionStatus...156`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...157`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...158`
+• `InfVol(ml)` -> `InfVol(ml)...159`
+• `RemainTime(s)` -> `RemainTime(s)...160`
+• `DumpID` -> `DumpID...161`
+• `DrugName` -> `DrugName...162`
+• `DrugConcentratrion` -> `DrugConcentratrion...163`
+• `InfusionStatus` -> `InfusionStatus...164`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...165`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...166`
+• `InfVol(ml)` -> `InfVol(ml)...167`
+• `RemainTime(s)` -> `RemainTime(s)...168`
+• `DumpID` -> `DumpID...169`
+• `DrugName` -> `DrugName...170`
+• `DrugConcentratrion` -> `DrugConcentratrion...171`
+• `InfusionStatus` -> `InfusionStatus...172`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...173`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...174`
+• `InfVol(ml)` -> `InfVol(ml)...175`
+• `RemainTime(s)` -> `RemainTime(s)...176`
+• `DumpID` -> `DumpID...177`
+• `DrugName` -> `DrugName...178`
+• `DrugConcentratrion` -> `DrugConcentratrion...179`
+• `InfusionStatus` -> `InfusionStatus...180`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...181`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...182`
+• `InfVol(ml)` -> `InfVol(ml)...183`
+• `RemainTime(s)` -> `RemainTime(s)...184`
+• `DumpID` -> `DumpID...185`
+• `DrugName` -> `DrugName...186`
+• `DrugConcentratrion` -> `DrugConcentratrion...187`
+• `InfusionStatus` -> `InfusionStatus...188`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...189`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...190`
+• `InfVol(ml)` -> `InfVol(ml)...191`
+• `RemainTime(s)` -> `RemainTime(s)...192`
+• `DumpID` -> `DumpID...193`
+• `DrugName` -> `DrugName...194`
+• `DrugConcentratrion` -> `DrugConcentratrion...195`
+• `InfusionStatus` -> `InfusionStatus...196`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...197`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...198`
+• `InfVol(ml)` -> `InfVol(ml)...199`
+• `RemainTime(s)` -> `RemainTime(s)...200`
+• `DumpID` -> `DumpID...201`
+• `DrugName` -> `DrugName...202`
+• `DrugConcentratrion` -> `DrugConcentratrion...203`
+• `InfusionStatus` -> `InfusionStatus...204`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...205`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...206`
+• `InfVol(ml)` -> `InfVol(ml)...207`
+• `RemainTime(s)` -> `RemainTime(s)...208`
+• `DumpID` -> `DumpID...209`
+• `DrugName` -> `DrugName...210`
+• `DrugConcentratrion` -> `DrugConcentratrion...211`
+• `InfusionStatus` -> `InfusionStatus...212`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...213`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...214`
+• `InfVol(ml)` -> `InfVol(ml)...215`
+• `RemainTime(s)` -> `RemainTime(s)...216`
+• `DumpID` -> `DumpID...217`
+• `DrugName` -> `DrugName...218`
+• `DrugConcentratrion` -> `DrugConcentratrion...219`
+• `InfusionStatus` -> `InfusionStatus...220`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...221`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...222`
+• `InfVol(ml)` -> `InfVol(ml)...223`
+• `RemainTime(s)` -> `RemainTime(s)...224`
+• `DumpID` -> `DumpID...225`
+• `DrugName` -> `DrugName...226`
+• `DrugConcentratrion` -> `DrugConcentratrion...227`
+• `InfusionStatus` -> `InfusionStatus...228`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...229`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...230`
+• `InfVol(ml)` -> `InfVol(ml)...231`
+• `RemainTime(s)` -> `RemainTime(s)...232`
+• `DumpID` -> `DumpID...233`
+• `DrugName` -> `DrugName...234`
+• `DrugConcentratrion` -> `DrugConcentratrion...235`
+• `InfusionStatus` -> `InfusionStatus...236`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...237`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...238`
+• `InfVol(ml)` -> `InfVol(ml)...239`
+• `RemainTime(s)` -> `RemainTime(s)...240`
+• `DumpID` -> `DumpID...241`
+• `DrugName` -> `DrugName...242`
+• `DrugConcentratrion` -> `DrugConcentratrion...243`
+• `InfusionStatus` -> `InfusionStatus...244`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...245`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...246`
+• `InfVol(ml)` -> `InfVol(ml)...247`
+• `RemainTime(s)` -> `RemainTime(s)...248`
+• `DumpID` -> `DumpID...249`
+• `DrugName` -> `DrugName...250`
+• `DrugConcentratrion` -> `DrugConcentratrion...251`
+• `InfusionStatus` -> `InfusionStatus...252`
+• `FlowRate(ml/h)` -> `FlowRate(ml/h)...253`
+• `Pressure(mmHg)` -> `Pressure(mmHg)...254`
+• `InfVol(ml)` -> `InfVol(ml)...255`
+• `RemainTime(s)` -> `RemainTime(s)...256`
+sev_et_fi present: TRUE 
+# A tibble: 5 × 1
+  sev_et_fi
+  <chr>    
+1 --/--    
+2 --/--    
+3 --/--    
+4 --/--    
+5 --/--    
+
+ppeak column class: numeric 
+ppeak sample values:
+# A tibble: 5 × 2
+  time                ppeak
+  <dttm>              <dbl>
+1 2026-09-19 13:40:00   0  
+2 2026-09-19 13:41:00   0.9
+3 2026-09-19 13:42:00   1  
+4 2026-09-19 13:43:00   4.4
+5 2026-09-19 13:44:00  19.5
+
+Testing cleaner1 for SAT...
+SAT rows: 903 
+SAT time range: 2026-09-19 13:36:00 2026-09-20 04:41:00 
+
+Checking sev_et_fi after separate:
+et_sevo present: TRUE 
+non-NA et_sevo rows: 902 
+
+Testing make_plotly1 components...
+HR rows: 905 
+NIBP rows: 111 
+ART rows: 2646 
+SAT rows: 903 
+
+NIBP head:
+# A tibble: 6 × 3
+  time                names        values
+  <dttm>              <chr>         <dbl>
+1 2026-09-19 13:40:00 nibp_s_mm_hg     89
+2 2026-09-19 13:40:00 nibp_d_mm_hg     50
+3 2026-09-19 13:40:00 nibp_m_mm_hg     64
+4 2026-09-19 13:43:00 nibp_s_mm_hg     77
+5 2026-09-19 13:43:00 nibp_d_mm_hg     51
+6 2026-09-19 13:43:00 nibp_m_mm_hg     57
+
+NIBP pivot_wider test:
+# A tibble: 6 × 4
+  time                nibp_s_mm_hg nibp_d_mm_hg nibp_m_mm_hg
+  <dttm>                     <dbl>        <dbl>        <dbl>
+1 2026-09-19 13:40:00           89           50           64
+2 2026-09-19 13:43:00           77           51           57
+3 2026-09-19 13:46:00           61           37           45
+4 2026-09-19 13:49:00           69           36           46
+5 2026-09-19 13:52:00           68           36           43
+6 2026-09-19 13:55:00           75           41           52

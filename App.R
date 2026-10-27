@@ -86,7 +86,7 @@ make_plotly1 <- function(dc) {
     if (nrow(bp_long) == 0 || all(is.na(bp_long$values))) return(p)
 
     bp_wide <- bp_long |>
-      pivot_wider(names_from = names, values_from = values)
+      pivot_wider(names_from = names, values_from = values, values_fn = mean)
 
     # detect column names flexibly
     sys_col  <- names(bp_wide)[grepl("_s_mm_hg$", names(bp_wide))]

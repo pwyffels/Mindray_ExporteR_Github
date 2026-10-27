@@ -1,0 +1,44 @@
+Columns after wrangle:
+ [1] "time"             "hr_bpm"           "sp_o2_percent"    "nibp_s_mm_hg"    
+ [5] "nibp_d_mm_hg"     "nibp_m_mm_hg"     "art_s_mm_hg"      "art_d_mm_hg"     
+ [9] "art_m_mm_hg"      "cvp_mm_hg"        "ppv_percent"      "et_o2_percent"   
+[13] "fi_o2_percent"    "rr_rpm"           "ppeak"            "pmean"           
+[17] "t_vi"             "m_vspn"           "ftotal"           "pv_cs_min"       
+[21] "pauses_min"       "vp_bs_min"        "couplets_min"     "missed_beats_min"
+[25] "r_on_ts_min"      "qt_ms"            "q_tc_ms"          "et_sevo"         
+[29] "fi_sevo"          "et_co2"           "fi_co2"          
+
+et_co2 class: numeric 
+et_co2 non-NA: 902 
+et_co2 sample:
+# A tibble: 5 × 3
+  time                et_co2 fi_co2
+  <dttm>               <dbl>  <dbl>
+1 2026-09-19 13:40:00      0      0
+2 2026-09-19 13:41:00      0      0
+3 2026-09-19 13:42:00      0      0
+4 2026-09-19 13:43:00      0      0
+5 2026-09-19 13:44:00      0      0
+
+et_sevo non-NA: 902 
+
+Raw co2_et_fi sample (non-NA):
+# A tibble: 5 × 1
+  co2_et_fi
+  <chr>    
+1 --/--    
+2 --/--    
+3 --/--    
+4 --/--    
+5 --/--    
+
+Raw sev_et_fi unique values:
+ [1] "--/--"         "0.0[%]/0.0[%]" NA              NA             
+ [5] NA              NA              NA              NA             
+ [9] NA              NA             
+
+Is '--/--' treated as NA?
+sev_et_fi unique values (raw col name '+Sev(Et/Fi)'):
+ [1] "--/--"         "0.0[%]/0.0[%]" NA              NA             
+ [5] NA              NA              NA              NA             
+ [9] NA              NA             
