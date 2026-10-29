@@ -18,6 +18,7 @@ wrangle_raw <- function(path) {
     "hr_bpm", "sp_o2_percent",
     "nibp_s_mm_hg", "nibp_d_mm_hg", "nibp_m_mm_hg",
     "art_s_mm_hg",  "art_d_mm_hg",  "art_m_mm_hg",
+    "pa_s_mm_hg",  "pa_d_mm_hg",  "pa_m_mm_hg",
     "cvp_mm_hg", "ppv_percent",
     "et_o2_percent", "fi_o2_percent",
     "rr_rpm", "peep", "ppeak", "pplat", "pmean", "t_vi", "mv", "m_vspn", "ftotal",
@@ -56,7 +57,9 @@ struct_data <- function(tab) {
                               "missed_beats_min","r_on_ts_min","qt_ms","q_tc_ms")),
       HR   = cleaner1(tab, "hr_bpm"),
       NIBP = cleaner1(tab, c("nibp_s_mm_hg","nibp_d_mm_hg","nibp_m_mm_hg")),
-      ART  = cleaner1(tab, c("art_s_mm_hg","art_d_mm_hg","art_m_mm_hg"))
+      ART  = cleaner1(tab, c("art_s_mm_hg","art_d_mm_hg","art_m_mm_hg")),
+      PAP = cleaner1(tab, c("pa_s_mm_hg","pa_d_mm_hg","pa_m_mm_hg")),
+      CVP = cleaner1(tab, c("cvp_mm_hg"))
     ),
     VENTILATION = list(
       SAT         = cleaner1(tab, "sp_o2_percent"),
@@ -78,6 +81,8 @@ make_plotly1 <- function(dc) {
   hr   <- dc$HEMO$HR
   nibp <- dc$HEMO$NIBP
   art  <- dc$HEMO$ART
+  pap  <- dc$HEMO$PAP
+  cvp <- dc$HEMO$CVP
   sat  <- dc$VENTILATION$SAT
 
   # helper: build vertical-segment + dot traces for a BP source (NIBP or ART)
@@ -134,6 +139,11 @@ make_plotly1 <- function(dc) {
   p_hemo <- plotly::plot_ly() |>
     add_bp_traces(nibp, "NIBP") |>
     add_bp_traces(art,  "ART") |>
+    add_bp_traces(pap,  "PAP") |>
+    plotly::add_trace(data = cvp, x = ~time, y = ~as.numeric(values),
+                      name = "CVP (mmHg)", type = "scatter", mode = "lines",
+                      line = list(color = "darkblue"), legendgroup = "hemo") |>
+
     plotly::add_trace(data = hr, x = ~time, y = ~as.numeric(values),
               name = "HR (bpm)", type = "scatter", mode = "lines",
               line = list(color = "darkgreen"), legendgroup = "hemo") |>
