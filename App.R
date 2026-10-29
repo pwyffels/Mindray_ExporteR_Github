@@ -18,7 +18,6 @@ wrangle_raw <- function(path) {
     "hr_bpm", "sp_o2_percent",
     "nibp_s_mm_hg", "nibp_d_mm_hg", "nibp_m_mm_hg",
     "art_s_mm_hg",  "art_d_mm_hg",  "art_m_mm_hg",
-    "pa_s_mm_hg",  "pa_d_mm_hg",  "pa_m_mm_hg",
     "cvp_mm_hg", "ppv_percent",
     "et_o2_percent", "fi_o2_percent",
     "rr_rpm", "peep", "ppeak", "pplat", "pmean", "t_vi", "mv", "m_vspn", "ftotal",
