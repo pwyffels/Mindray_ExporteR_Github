@@ -18,6 +18,7 @@ wrangle_raw <- function(path) {
     "hr_bpm", "sp_o2_percent",
     "nibp_s_mm_hg", "nibp_d_mm_hg", "nibp_m_mm_hg",
     "art_s_mm_hg",  "art_d_mm_hg",  "art_m_mm_hg",
+    "pa_s_mm_hg",  "pa_d_mm_hg",  "pa_m_mm_hg",
     "cvp_mm_hg", "ppv_percent",
     "et_o2_percent", "fi_o2_percent",
     "rr_rpm", "peep", "ppeak", "pplat", "pmean", "t_vi", "mv", "m_vspn", "ftotal",
@@ -85,7 +86,7 @@ make_plotly1 <- function(dc) {
   sat  <- dc$VENTILATION$SAT
 
   # helper: build vertical-segment + dot traces for a BP source (NIBP or ART)
-  add_bp_traces <- function(p, bp_long, label_prefix) {
+  add_bp_traces <- function(p, bp_long, label_prefix,col) {
     # only proceed if there is actual data
     if (nrow(bp_long) == 0 || all(is.na(bp_long$values))) return(p)
 
@@ -105,14 +106,14 @@ make_plotly1 <- function(dc) {
                    y = as.formula(paste0("~", dia_col)),
                    yend = as.formula(paste0("~", sys_col)),
                    showlegend = FALSE,
-                   line = list(color = "red", width = 1.5))
+                   line = list(color = col, width = 1.5))
 
     p <- p |>
       plotly::add_trace(data = bp_wide, x = ~time,
                 y = as.formula(paste0("~", sys_col)),
                 name = paste(label_prefix, "systolic"),
                 type = "scatter", mode = "markers",
-                marker = list(color = "red", size = 7),
+                marker = list(color = col, size = 7),
                 legendgroup = label_prefix)
 
     if (length(mean_col) > 0)
@@ -121,7 +122,7 @@ make_plotly1 <- function(dc) {
                   y = as.formula(paste0("~", mean_col)),
                   name = paste(label_prefix, "mean"),
                   type = "scatter", mode = "markers",
-                  marker = list(color = "red", size = 7, symbol = "diamond"),
+                  marker = list(color = col, size = 7, symbol = "diamond"),
                   legendgroup = label_prefix)
 
     p <- p |>
@@ -129,16 +130,16 @@ make_plotly1 <- function(dc) {
                 y = as.formula(paste0("~", dia_col)),
                 name = paste(label_prefix, "diastolic"),
                 type = "scatter", mode = "markers",
-                marker = list(color = "red", size = 7),
+                marker = list(color = col, size = 7),
                 legendgroup = label_prefix)
     p
   }
 
   # subplot 1: BP (NIBP + ART) + HR
   p_hemo <- plotly::plot_ly() |>
-    add_bp_traces(nibp, "NIBP") |>
-    add_bp_traces(art,  "ART") |>
-    add_bp_traces(pap,  "PAP") |>
+    add_bp_traces(nibp, "NIBP",'red') |>
+    add_bp_traces(art,  "ART",'red') |>
+    add_bp_traces(pap,  "PAP",'orange') |>
     plotly::add_trace(data = cvp, x = ~time, y = ~as.numeric(values),
                       name = "CVP (mmHg)", type = "scatter", mode = "lines",
                       line = list(color = "darkblue"), legendgroup = "hemo") |>
